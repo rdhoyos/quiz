@@ -11,3 +11,8 @@ exports.answer = function(req, res) {
       res.render('quizes/answer', {respuesta: 'Incorrecto'});
    }
 };
+
+// GET /quizes/autor
+exports.autor = function(req, res) {
+    res.render('quizes/autor', {name: 'Ronal David Hoyos G'});
+};
