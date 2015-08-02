@@ -43,8 +43,15 @@ sequelize.sync().then(function() {
   Quiz.count().then(function (count){
     if(count === 0) {   // la tabla se inicializa solo si está vacía
       Quiz.bulkCreate(
-          [ {pregunta: 'Capital de Italia',   respuesta: 'Roma'},
-            {pregunta: 'Capital de Portugal', respuesta: 'Lisboa'}
+          [ {pregunta: 'Capital de Italia',   respuesta: 'Roma', tema:'otro'},
+            {pregunta: 'Capital de Portugal', respuesta: 'Lisboa', tema:'otro'},
+						{pregunta: 'El smartphone más vendido del mundo', respuesta: 'iPhone', tema:'tecnologia'},
+						{pregunta: 'Cual es el último sistema operativo de Microsoft', respuesta: 'Windows 10', tema:'tecnologia'},
+						{pregunta: 'Cuantas gramos hacen una onza', respuesta: '448', tema:'ciencia'},
+						{pregunta: 'Que animal es el rey de la selva', respuesta: 'León', tema:'ciencia'},
+						{pregunta: 'Ganador del Tour de Francia 2015', respuesta: 'Chris Froome', tema:'ocio'},
+						{pregunta: 'Subcampeón del Tour de Francia 2015', respuesta: 'Nairo Quintana', tema:'ocio'},
+						{pregunta: 'Quien fue el primer presidente de los Estados Unidos de América', respuesta: 'George Washington', tema:'humanidades'}
           ]
         ).then(function(){console.log('Base de datos inicializada')});
     };

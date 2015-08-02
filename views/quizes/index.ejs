@@ -12,6 +12,7 @@
     </tr>
     <% var i; for (i=0; i < quizes.length; i++) { %>
        <tr>
+         <td><%= quizes[i].tema.charAt(0).toUpperCase() + quizes[i].tema.slice(1) %></td>
          <td><a href="quizes/<%= quizes[i].id %>"><%= quizes[i].pregunta %></a></td>
          <td><a href="quizes/<%= quizes[i].id %>/edit"><button>editar</button></a></td>
          <td>
